@@ -3,14 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "dev": "NODE_ENV=development webpack-dev-server --config webpack.dev.js",
-    "start": "NODE_ENV=production webpack-dev-server --config webpack.prod.js",
-    "build": "NODE_ENV=production webpack --config webpack.prod.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jihyunleeme/webpack.git"
@@ -21,19 +13,21 @@
     "url": "https://github.com/jihyunleeme/webpack/issues"
   },
   "homepage": "https://github.com/jihyunleeme/webpack#readme",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack-dev-server --config webpack.dev.js",
+    "start": "NODE_ENV=production webpack-dev-server --config webpack.prod.js",
+    "build": "NODE_ENV=production webpack --config webpack.prod.js",
+    "lint": "eslint 'src/**/*.ts'",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
   "devDependencies": {
     "@babel/core": "^7.17.10",
     "@babel/plugin-transform-runtime": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
     "@babel/preset-react": "^7.16.7",
-    "@storybook/addon-actions": "^6.4.22",
-    "@storybook/addon-essentials": "^6.4.22",
-    "@storybook/addon-interactions": "^6.4.22",
-    "@storybook/addon-links": "^6.4.22",
-    "@storybook/react": "^6.4.22",
-    "@storybook/testing-library": "^0.0.11",
-    "@types/react": "^18.0.9",
-    "@types/react-dom": "^18.0.3",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
     "babel-loader": "^8.2.5",
