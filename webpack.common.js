@@ -24,7 +24,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: "./index.html",
-      template: path.resolve(__dirname, "./index.html")
+      template: path.resolve(__dirname, "./index.html"),
+      favicon: "./static/logo.png",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: "static" }],
     }),
     isProduction &&
       new MiniCSSExtractPlugin({
