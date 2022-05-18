@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import type { RootState } from "../../store";
+import type { RootState } from "../../rootReducer";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { decrement, increment } from "./counterSlice";
 
