@@ -21,12 +21,14 @@ webpack quick starter
 4. 원격 저장소 연결 및 확인  
     ```git 
     git remote add origin [url]
+    git branch -M main
     ```
 
 5. 저장소 연결 후 push!
 
 - 기타 이외 명령어
-```
+```bash
+git branch -a // 모든 브랜치 목록확인
 git remote -v // remote 확인하기
 git remote remove [repositoryName] // remote 연결 지우기 
 ``` 
