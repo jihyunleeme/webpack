@@ -1,6 +1,7 @@
-import Button from "./components/Button/Button";
+import React from "react";
+import { Counter } from "./components/Counter";
 
 const App = () => {
-  return <button>버튼</button>;
+  return <Counter />;
 };
 export default App;

@@ -18,7 +18,7 @@ export interface ButtonProps {
   style?: React.CSSProperties;
 }
 
-export default React.forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       children,
@@ -59,3 +59,6 @@ export default React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   }
 );
+
+Button.displayName = "Button";
+export default Button;
