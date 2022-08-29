@@ -26,19 +26,31 @@ module.exports = {
     project: "./tsconfig.json",
   },
   plugins: ["@typescript-eslint"],
+  root: true,
+  settings: {
+    "import/resolver": {
+      node: {
+        paths: ["src"],
+        extensions: [".js", ".ts", ".d.ts", ".tsx"],
+      },
+    },
+  },
   rules: {
     indent: ["error", 2],
     "no-empty": "warn",
-    "no-console": "warn",
+    "no-console": [
+      "warn",
+      { allow: ["clear", "info", "error", "dir", "trace", "log"] },
+    ],
     "no-unused-vars": "off",
-    "linebreak-style": ["error", "unix"],
+    "linebreak-style": ["error", "windows"],
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
       { vars: "all", args: "after-used", ignoreRestSiblings: false },
     ],
-    "@typescript-eslint/explicit-function-return-type": "warn", // Consider using explicit annotations for object literals and function return types even when they can be inferred.
+    "@typescript-eslint/explicit-function-return-type": "off", // Consider using explicit annotations for object literals and function return types even when they can be inferred.
     "@typescript-eslint/naming-convention": [
       "error",
       // Allow camelCase variables (23.2), PascalCase variables (23.8), and UPPER_CASE variables (23.10)
