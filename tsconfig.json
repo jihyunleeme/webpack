@@ -2,12 +2,23 @@
   "compilerOptions": {
     "target": "es5",
     "jsx": "react-jsx",
+    "pretty": true,
     "module": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "baseUrl": "."
+    /*
+    "paths": {
+      // 절대경로 설정
+      // "@/*": ["src/*"]
+    },
+    */
   },
   "include": ["src"]
 }
